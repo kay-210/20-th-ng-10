@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title> 20/10 hội người già </title>
+    <title> 20/10 </title>
     <meta charset="utf-8">
-    <meta name="Keywords" content="20/10,hội người già">
+    <meta name="Keywords" content="20/10">
     <meta name="Description" content="20/10，HTML，20/10GooGle20/10">
     <link rel="shortcut icon" href="../picture/爱心.png" type="image/x-icon">
     <style>
@@ -81,7 +81,7 @@
 
     <script>
         function showMessage() {
-            alert("Chúc mừng 20/10! chúc các bạn nữ trong nhóm hội người già 20/10 luôn luôn vui vẻ, ngày càng xinh đẹp và sẽ ngày càng học giỏi (do còn hơi non nên lm đc có v ak 😅)");
+            alert("Chúc mừng 20/10! chúc các bạn nữ 20/10 luôn luôn vui vẻ, ngày càng xinh đẹp và sẽ ngày càng học giỏi");
         }
     </script>
     <canvas id="pinkboard"></canvas>
@@ -99,7 +99,9 @@
                 size: 30,
             },
         };
-(function () { var b = 0; var c = ["ms", "moz", "webkit", "o"]; for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) { window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"]; window.cancelAnimationFrame = window[c[a] + "CancelAnimationFrame"] || window[c[a] + "CancelRequestAnimationFrame"] } if (!window.requestAnimationFrame) { window.requestAnimationFrame = function (h, e) { var d = new Date().getTime(); var f = Math.max(0, 16 - (d - b)); var g = window.setTimeout(function () { h(d + f) }, f); b = d + f; return g } } if (!window.cancelAnimationFrame) { window.cancelAnimationFrame = function (d) { clearTimeout(d) } } }());
+
+
+        (function () { var b = 0; var c = ["ms", "moz", "webkit", "o"]; for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) { window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"]; window.cancelAnimationFrame = window[c[a] + "CancelAnimationFrame"] || window[c[a] + "CancelRequestAnimationFrame"] } if (!window.requestAnimationFrame) { window.requestAnimationFrame = function (h, e) { var d = new Date().getTime(); var f = Math.max(0, 16 - (d - b)); var g = window.setTimeout(function () { h(d + f) }, f); b = d + f; return g } } if (!window.cancelAnimationFrame) { window.cancelAnimationFrame = function (d) { clearTimeout(d) } } }());
 
 
         var Point = (function () {
@@ -157,7 +159,7 @@
                 }
                 var size = image.width * ease(this.age / settings.particles.duration);
                 context.globalAlpha = 1 - this.age / settings.particles.duration;
-context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
+                context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
             };
             return Particle;
         })();
@@ -236,8 +238,10 @@ context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2,
                     160 * Math.pow(Math.sin(t), 3),
                     130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
                 );
-}
-          var image = (function () {
+            }
+
+
+            var image = (function () {
                 var canvas = document.createElement('canvas'),
                     context = canvas.getContext('2d');
                 canvas.width = settings.particles.size;
@@ -269,16 +273,18 @@ context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2,
                 return image;
             })();
 
-          function render() {
+
+            function render() {
 
                 requestAnimationFrame(render);
+
+
                 var newTime = new Date().getTime() / 1000,
                     deltaTime = newTime - (time || newTime);
                 time = newTime;
 
 
-                context.clearRect(0 context.clearRect(0, 0, canvas.width, canvas.height);
-context.clearRect(0, 0, canvas.width, canvas.height);
+                context.clearRect(0, 0, canvas.width, canvas.height);
 
 
                 var amount = particleRate * deltaTime;
@@ -310,4 +316,4 @@ context.clearRect(0, 0, canvas.width, canvas.height);
  
 </body>
 
-</html>
+</html> 
